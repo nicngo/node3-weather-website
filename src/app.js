@@ -3,15 +3,15 @@ import express from "express"
 import hbs from "hbs"
 
 const __dirname = path.resolve()
-console.log("Path.resolve: " + __dirname)
+//console.log("Path.resolve: " + __dirname)
  
 const publicDirectoryPath = path.join(__dirname, '/public')
-console.log("public dir: " + publicDirectoryPath)
+//console.log("public dir: " + publicDirectoryPath)
 
 const viewPath= path.join(__dirname, '/templates/views')
-console.log("viewPath: " + viewPath)
+//console.log("viewPath: " + viewPath)
 const partialsPath= path.join(__dirname, '/templates/partials')
-console.log("partialsPath: " + partialsPath)
+//console.log("partialsPath: " + partialsPath)
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -89,5 +89,5 @@ app.get('*', (req, res) => {
 })
 
  app.listen(port, () => {
-     console.log('Server is up on port 3000')
+     console.log('Server is up on port: ' + port)
  })
