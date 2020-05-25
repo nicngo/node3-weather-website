@@ -14,6 +14,8 @@ const partialsPath= path.join(__dirname, '/templates/partials')
 console.log("partialsPath: " + partialsPath)
 
 const app = express()
+const port = process.env.PORT || 3000
+
 //This is to serve all pages from public
 app.use(express.static(publicDirectoryPath))
 app.set('view engine', 'hbs')
@@ -86,6 +88,6 @@ app.get('*', (req, res) => {
     })
 })
 
- app.listen(3000, () => {
+ app.listen(port, () => {
      console.log('Server is up on port 3000')
  })
